@@ -1,6 +1,7 @@
 class StaticController < ApplicationController
+
     def about
-        render "why"
+        render "about"
     end
 
 end
