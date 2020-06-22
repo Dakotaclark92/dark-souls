@@ -1,0 +1,24 @@
+<style>
+body {
+  background-image: url('https://pbs.twimg.com/media/EYONBPBU8AEwRop?format=png&name=900x900');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+</style>
+
+<% if flash[:notice] %>
+   <div class="notice"><%= flash[:notice] %></div>
+ <% end %>
+
+<%= form_for(@user) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %><br>
+    <br>
+    </div>
+    <%= f.label :password %>
+    <%= f.password_field :password, class: 'form-control' %>
+    <br>
+
+    <%= f.submit 'Create User'%>
+<% end %>

@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
         end
     end
 
-    def sigh_out
+    def sign_out
         session.clear
         redirect_to root_path
     end
