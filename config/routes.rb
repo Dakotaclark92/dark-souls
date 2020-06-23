@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   root "home#index"
   resources :users
   
-  get '/user/new' => "user#new"
-  post '/user/new' => "user#create"
+  get '/users/new' => "users#new"
+  post '/users/new' => "users#create"
   delete '/signout' => "sessions#sign_out"
 
 

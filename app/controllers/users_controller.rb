@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class UserController < ApplicationController
     before_action :current_user, only: [:show]
 
     include ApplicationHelper
