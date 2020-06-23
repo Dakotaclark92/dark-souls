@@ -12,13 +12,15 @@ body {
  <% end %>
 
 <%= form_for(@user) do |f| %>
+
+  <div style = "position:absolute; left:40px; top:300px;">
     <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control' %><br>
+    <%= f.text_field :name, class: 'form-control' %>
     <br>
-    </div>
+    
     <%= f.label :password %>
     <%= f.password_field :password, class: 'form-control' %>
     <br>
 
-    <%= f.submit 'Create User'%>
+    <%= f.submit 'Create character'%></div>
 <% end %>

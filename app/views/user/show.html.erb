@@ -1,0 +1,10 @@
+<% if flash[:notice] %>
+   <%= flash[:notice] %></div>
+ <% end %>
+
+
+<h3>Details</h3>
+<ul>
+    <li>Name: <%= @user.name %></li>
+    </ul>
+<%= link_to 'See attractions', attractions_path %>
