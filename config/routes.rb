@@ -6,9 +6,10 @@ Rails.application.routes.draw do
   
   get '/users/new' => "users#new"
   post '/users/new' => "users#create"
+
+  get '/sessions/new' => "sessions#new"
+  post '/sessions/new' => "sessions#create"
   delete '/signout' => "sessions#sign_out"
-
-
 
 
 end
