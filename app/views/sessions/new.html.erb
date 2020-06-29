@@ -1,3 +1,13 @@
+<style>
+body {
+  background-image: url('https://steamuserimages-a.akamaihd.net/ugc/960864868555925364/2FA5EA827A919FEF7D5CC4A74A7491ADDF729E01/');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+</style>
+
+
 <%= form_tag ('/signin') do %>
     <label>Your name: </label>
     <%= collection_select :user, :name, User.all, :name, :name, {prompt: "Please select your username from this dropdown"} %>
@@ -8,3 +18,7 @@
     <input type="password", name="user[password]", id="password"><br><br>
     <input type="submit" value="Sign In">
 <% end %>
+
+<div style = "position:absolute; left:1400px; top:10px;">
+<a href="/home/index"><img src="https://i.pinimg.com/originals/80/21/74/8021744fc275101ed9a4b75ace41f168.gif"
+ alt="Home" width="60" height="60"></a><a>Home</a></div>

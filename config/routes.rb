@@ -7,9 +7,16 @@ Rails.application.routes.draw do
   get '/users/new' => "users#new"
   post '/users/new' => "users#create"
 
-  get '/sessions/new' => "sessions#new"
-  post '/sessions/new' => "sessions#create"
+  get '/signin' => "sessions#new"
+  post '/signin' => "sessions#create"
+  get '/sessions/home' => "sessions#home"
   delete '/signout' => "sessions#sign_out"
+
+  get '/characters/new' => "characters#new"
+  post '/characters/new' => "characters#create"
+
+  get '/home/index' => "home#index"
+
 
 
 end
