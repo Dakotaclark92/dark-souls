@@ -16,6 +16,15 @@ class SessionsController < ApplicationController
         end
     end
 
+    def show
+        if sign_in?
+            @user = User.find_by(id: params[:id])
+        else
+            flash[:notice] = "The Bell has not Tolled"
+            render :new
+        end
+    end
+
     def sign_out
         session.clear
         redirect_to root_path

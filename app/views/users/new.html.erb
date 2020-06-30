@@ -14,17 +14,14 @@ body {
 <%= form_for(@user) do |f| %>
 
   <div style = "position:absolute; left:40px; top:300px;">
-    <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control' %>
+ <a style= "color:white;">
+ <%= f.label :name %>
+   <%= f.text_field :name, class: 'form-control' %>
     <br>
     
     <%= f.label :password %>
-    <%= f.password_field :password, class: 'form-control' %>
+    <%= f.password_field :password, class: 'form-control' %></a>
     <br>
 
     <%= f.submit 'Create character'%></div>
 <% end %>
-
-<div style = "position:absolute; left:1400px; top:10px;">
-<a href="/home/index"><img src="https://i.pinimg.com/originals/80/21/74/8021744fc275101ed9a4b75ace41f168.gif"
- alt="Home" width="60" height="60"></a><a>Home</a></div>

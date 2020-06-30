@@ -11,13 +11,13 @@
      <div style = "position:absolute; left:10px; top:0px;">
      <a href="/home/index"><img src="https://i.pinimg.com/originals/80/21/74/8021744fc275101ed9a4b75ace41f168.gif"
         alt="Home" width="60" height="60"></a>
-        <a style="color:black;" class="navbar-brand" href="<%= root_url %>"/>Home</a>   
+        <a style="color:white;" class="navbar-brand" href="<%= root_url %>"/>Home</a>   
               <% if !logged_in? %>
-        <a style="color:black;" <%= link_to "Sign In", signin_path, class: "navbar-brand" %></a>
-        <a style="color:black;" <%= link_to "Sign Up", new_user_path, class: "navbar-brand" %></a>
+        <a style="color:white;" <%= link_to "Sign In", signin_path, class: "navbar-brand" %></a>
+        <a style="color:white;" <%= link_to "Sign Up", new_user_path, class: "navbar-brand" %></a>
       <% else %>
-        <a style="color:black;" class="navbar-brand" href="/users/<%= current_user.id%>"/><%= current_user.name %>'s profile</a>
-        <a style="color:black;" <%=  link_to "Log Out", signout_path, class: "navbar-brand", method: "delete" %></a>
+        <a style="color:white;" class="navbar-brand" href="/users/<%= current_user.id%>"/><%= current_user.name %>'s profile</a>
+        <a style="color:white;" <%=  link_to "Log Out", signout_path, class: "navbar-brand", method: "delete" %></a>
       <% end %>
       </div>
       <div class="navbar-collapse collapse">
