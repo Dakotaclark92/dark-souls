@@ -11,9 +11,23 @@ body {
 
   <%= form_for(@character) do |f| %>
     
-    <%= f.label 'Character Name' %>
+    <a style= "color:white;"><%= f.label 'Character Name' %></a>
+    <%= f.text_field :name %><br>
+
+    <a style= "color:white;"><%= f.label 'Gender' %></a>
+    <select name="gender" id="character">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      </select>
+      <br>
+
+    <a style= "color:white;"><%= f.label 'Buarial Gift' %></a>
+    <%= f.select ["a","b","c"] %><br>
+
+    <a style= "color:white;"><%= f.label 'Subclass' %></a>
     <%= f.text_field :name %><br>
 
       <%= f.submit 'Create Character'%>
 <% end %>
 
+<%= f.select :email_provider, ["gmail","yahoo","msn"]%>

@@ -1,0 +1,16 @@
+<style>
+body {
+  background-image: url('https://steamuserimages-a.akamaihd.net/ugc/499143085897427594/F99324B44233866B8CAC97588A8C48F876A655EA/');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+</style>
+
+<h1>.</h1>
+<h2>Edit Character</h2>
+<%= form_for(@character) do |f| %>
+    <%= f.label 'Character Name' %>
+    <%= f.text_field :name %><br><br>
+    <%= f.submit "Update Character" %>
+<% end %>

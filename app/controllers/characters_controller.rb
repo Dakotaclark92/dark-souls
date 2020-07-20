@@ -2,10 +2,11 @@ class CharactersController < ApplicationController
     before_action :set_character, only: [:show, :edit, :update, :destroy]
 
     def index
-        @character = Character.all
+        @characters = Character.all
     end
 
     def show
+     
     end
 
     def new
@@ -42,6 +43,4 @@ class CharactersController < ApplicationController
     def set_character
         @character = Character.find_by_id(params[:id])
     end
-
-
 end
