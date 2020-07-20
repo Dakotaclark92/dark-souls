@@ -3,9 +3,7 @@ Rails.application.routes.draw do
 
   root "home#index"
   resources :users
-  
-  get '/users/new' => "users#new"
-  post '/users/new' => "users#create"
+  resources :characters
 
   get '/signin' => "sessions#new"
   post '/signin' => "sessions#create"

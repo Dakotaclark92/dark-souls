@@ -6,3 +6,14 @@ body {
   background-size: cover;
 }
 </style>
+
+<h1>.<h1>
+
+  <%= form_for(@character) do |f| %>
+    
+    <%= f.label 'Character Name' %>
+    <%= f.text_field :name %><br>
+
+      <%= f.submit 'Create Character'%>
+<% end %>
+

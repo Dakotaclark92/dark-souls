@@ -9,14 +9,13 @@ body {
 
 <h1>.</h1>
 
-<a style="color:white;" <%= form_tag ('/signin') do %>
-    <label>Your name: </label>
-    <%= collection_select :user, :name, User.all, :name, :name, {prompt: "Please select your username from this dropdown"} %>
-    <br><br>
+<%= form_tag ('/signin') do %>
+  <a style="color:white;"<label>Your name: </label></a><br>
+  <%= collection_select :user, :name, User.all, :name, :name, {prompt: "Please select your username from this dropdown"} %>
+  <br><br>
 
 
-    <label>Your password: </label><br>
-    <input type="password", name="user[password]", id="password"><br><br>
-    <input type="submit", value="Sign In">
-
+  <a style="color:white;"<label>Your password: </label></a><br>
+  <input type="password", name="user[password]", id="password"><br><br>
+  <input type="submit" value="Sign In">
 <% end %>
