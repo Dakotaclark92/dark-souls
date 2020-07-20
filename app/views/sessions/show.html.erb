@@ -1,0 +1,30 @@
+<style>
+body {
+  background-image: url('https://i.imgur.com/unIj1Le.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+</style>
+
+
+<% if flash[:notice] %>
+   <%= flash[:notice] %></div>
+ <% end %>
+
+<div style = "position:absolute; left:700px; top:300px;">
+<body>
+<h2 style="color:black;">The Bell has Tolled for</h1>
+  <h4 style="color:black;"><%= @user.name %></h4>
+
+  <h3 style ="color:black;">Use the Bonfire to continue</h2>
+
+  <h1 style ="color:black:">This one is different</h1>
+</body></div>
+
+  <div style = "position:absolute; left:785px; top:585px;">
+   <a href="/sessions/home"><img src="https://steamuserimages-a.akamaihd.net/ugc/642122953509701566/B713E72A4007E29A1D2B53919716E2BA9BF237BD/"
+    alt="bonfire" width="270" height="270"></a></div>
+ 
+
+
