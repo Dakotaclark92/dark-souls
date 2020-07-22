@@ -8,9 +8,9 @@ body {
 </style>
 
 <h1>.</h1>
-<h2>Edit Character</h2>
+<h2 style= "color:white;">Edit Character</h2>
 <%= form_for(@character) do |f| %>
-    <%= f.label 'Character Name' %>
+    <a style= "color:white;"<%= f.label 'Character Name' %></a><br>
     <%= f.text_field :name %><br><br>
     <%= f.submit "Update Character" %>
 <% end %>

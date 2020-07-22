@@ -12,4 +12,13 @@ body {
 <p style= "color:white;"><strong>Name:</strong> <%= @character.name %></p>
 <br>
 
+<% if current_user %>
+    <a style= "color:white;"<%= link_to "Edit Character", edit_character_path %></a>
+<% else %>
+    <%= form_tag(character_path method: :post) do %>
+        <%= hidden_field_tag(:user_id, current_user.id) %>
+        <%= hidden_field_tag(:character_id, @character.id) %>
+        <%= submit_tag "Go through fog wall" %>
+    <% end %>
+<% end %>
 
