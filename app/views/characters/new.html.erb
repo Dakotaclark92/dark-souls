@@ -11,15 +11,24 @@ body {
 
   <%= simple_form_for(@character) do |f| %>
     
-    <a style= "color:white;"><%= f.label 'Character Name' %></a>
+    <a style= "color:white;"><%= f.label 'Character Name' %><br>
     <%= f.text_field :name %><br>
     
+    <%= simple_form_for (@character) do |f| %><br>
+      <a style= "color:white;"><%= f.input :gender, collection: ["Male", "Female"]%></a><br>
+
     <%= simple_form_for (@character) do |f| %>
-      <a style= "color:white;"  <%= f.input :gender, collection: ["Male", "Female"]%>
+      <a style= "color:white;"><%= f.input :burial_gift, collection: ["Life Ring", "Divine Blessing", "Hidden Blessing", "Black Firebomb x5", "Fire Gem", "Sovereignless Soul", "Gold Coin x7", "Cracked Red Eye Orb x4", "Young White Branch"]%><br>
+
+    <%= simple_form_for (@character) do |f| %>
+      <a style= "color:white;"><%= f.input :subclass, collection: ["Knight", "Mercenary", "Warrior", "Herald", "Thief", "Assassin", "Sorcerer", "Pyromancer", "Cleric", "Deprived"]%><br>
+  
     
 
 
       <%= f.submit 'Create Character'%>
+      <%end%>
+      <%end%>
       <%end%>
 <% end %>
 

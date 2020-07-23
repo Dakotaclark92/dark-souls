@@ -1,12 +1,14 @@
 class CharactersController < ApplicationController
     before_action :set_character, only: [:show, :edit, :update, :destroy]
 
+    include ApplicationHelper
+
     def index
         @characters = Character.all
     end
 
     def show
-     
+            
     end
 
     def new
@@ -37,7 +39,7 @@ class CharactersController < ApplicationController
     private
 
     def character_params
-        params.require(:character).permit(:name, :id, :gender)
+        params.require(:character).permit(:name, :id, :gender, :burial_gift, :subclass)
     end
 
     def set_character

@@ -15,6 +15,8 @@ ActiveRecord::Schema.define(version: 3) do
   create_table "characters", force: :cascade do |t|
     t.string "name"
     t.string "gender"
+    t.string "burial_gift"
+    t.string "subclass"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
