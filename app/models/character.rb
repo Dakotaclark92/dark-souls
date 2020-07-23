@@ -1,3 +1,3 @@
-class Character < ApplicationRecord
-    has_many :gender
+class Character < ActiveRecord::Base
+    has_many :genders
 end

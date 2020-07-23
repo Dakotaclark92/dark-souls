@@ -9,17 +9,18 @@ body {
 
 <h1>.<h1>
 
-  <%= form_for(@character) do |f| %>
+  <%= simple_form_for(@character) do |f| %>
     
     <a style= "color:white;"><%= f.label 'Character Name' %></a>
     <%= f.text_field :name %><br>
     
-    <%= simple_form_for @character do |f| %>
-      <a style= "color:white;"<%= f.input :gender, as: :radio_buttons, collection: [['0', 'female'], ['1', 'male']], label_method: :second, value_method: :first%></a>
-    <%end%>
+    <%= simple_form_for (@character) do |f| %>
+      <a style= "color:white;"  <%= f.input :gender, collection: ["Male", "Female"]%>
+    
 
 
       <%= f.submit 'Create Character'%>
+      <%end%>
 <% end %>
 
 

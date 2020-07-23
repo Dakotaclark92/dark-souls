@@ -37,10 +37,11 @@ class CharactersController < ApplicationController
     private
 
     def character_params
-        params.require(:character).permit(:name, :min_height, :happiness_rating, :nausea_rating, :tickets, :id)
+        params.require(:character).permit(:name, :id, :gender)
     end
 
     def set_character
         @character = Character.find_by_id(params[:id])
     end
 end
+

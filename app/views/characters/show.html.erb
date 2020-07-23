@@ -10,7 +10,9 @@ body {
 <h1>.</h1>
 
 <p style= "color:white;"><strong>Name:</strong> <%= @character.name %></p>
+<p style= "color:white;"><strong>Gender:</strong> <%= @character.gender %></p>
 <br>
+
 
 <% if current_user %>
     <a style= "color:white;"<%= link_to "Edit Character", edit_character_path %></a>
