@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   get '/characters/new' => "characters#new"
   post '/characters/new' => "characters#create"
+  delete '/erase' => "characters#erase"
 
   get '/home/index' => "home#index"
 

@@ -23,6 +23,11 @@ body {
     <%= f.password_field :password, class: 'form-control' %></a>
     <br>
 
+    <div class="form-group">
+        <a style= "color:white;"><%= f.label 'Check box if you want to Git Gud' %></a>
+        <%= f.check_box :admin %>
+        </div>
+
     <%= f.submit 'Create User'%></div>
 <% end %>
 

@@ -1,7 +1,7 @@
 class CharactersController < ApplicationController
     before_action :set_character, only: [:show, :edit, :update, :destroy]
 
-    include ApplicationHelper
+    
 
     def index
         @characters = Character.all
@@ -36,6 +36,10 @@ class CharactersController < ApplicationController
         end
     end
 
+    def dead
+        
+    end
+
     private
 
     def character_params
@@ -45,5 +49,7 @@ class CharactersController < ApplicationController
     def set_character
         @character = Character.find_by_id(params[:id])
     end
+
+
 end
 
