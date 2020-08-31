@@ -63,3 +63,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'simple_form'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-google'
+gem 'omniauth-github'
+gem 'dotenv-rails'

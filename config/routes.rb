@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   get '/home/index' => "home#index"
 
+  match '/auth/:provider/callback', to: 'sessions#created', via: [:get, :post]
+
 
 
 end
