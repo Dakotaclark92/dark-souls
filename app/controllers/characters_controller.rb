@@ -1,10 +1,10 @@
 class CharactersController < ApplicationController
-    before_action :set_character, only: [:show, :edit, :update, :destroy]
+    before_action :set_character, only: [:show, :edit, :update, :destroy, :dead]
 
     
 
     def index
-        @characters = Character.all
+        Character.order(:created_at)
     end
 
     def show

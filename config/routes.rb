@@ -18,6 +18,6 @@ Rails.application.routes.draw do
 
   match '/auth/:provider/callback', to: 'sessions#created', via: [:get, :post]
 
-
+  get '/profile' => "users#show"
 
 end

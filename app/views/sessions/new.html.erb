@@ -7,7 +7,7 @@ body {
 }
 </style>
 
-<h1>.</h1>
+<h1>.</h1><br>
 
 <%= form_tag ('/signin') do %>
   <a style="color:white;"<label>Your name: </label></a><br>
@@ -19,5 +19,5 @@ body {
   <input type="password", name="user[password]", id="password"><br><br>
   <input type="submit" value="Sign In"><br>
 
-  <a style="color:white;" <%= link_to 'Signing in with Github', '/auth/developer'%></a>
+  <a style="color:white;" <%= link_to 'Signing in with Github', '/auth/github'%></a>
 <% end %>
