@@ -6,9 +6,10 @@ class SessionsController < ApplicationController
     end
 
     def created
-        pp request.env['omniauth.auth']
-        session[:name] = request.env['omniauth.auth']['info']['name']
-        session[:omniauth_data] = request.env['omniauth.auth']
+        @user = User.find_or_create_by(name: request.env['omniauth.auth']['info']['name']) do |u|
+            u.password = SecureRandom.hex(10)
+        end
+        session[:user_id] = @user.id
         redirect_to root_path
     
     end
